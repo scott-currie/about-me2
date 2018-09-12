@@ -1,0 +1,33 @@
+* {
+    box-sizing:border-box;
+}
+
+header {
+    background: orange;
+    color: blue;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+div {
+    border: 2px dashed #111;
+    margin: 30px;
+    padding: 10px;
+}
+
+h2{
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1px;
+    background-color: orange;
+    text-align: center;
+    border-radius: 20px;
+}
