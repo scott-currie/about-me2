@@ -124,17 +124,20 @@ do {
   parseInt(question6);
   if (question6 < question6Answer) {
     guess = guess + 1;
+    console.log('Wrong Answer. User guessed ' + question6 + ' has used ' + guess + ' guesses and has ' + totalWrong + ' wrong answers.');
     userMessage = 'Nope.  You guessed a little low.  You have ' + (4 - guess) + ' guesses left';
         if (guess > 3) {
       totalWrong = totalWrong + 1;
     }
   } else if(question6 > question6Answer) {
     guess = guess + 1; 
+    console.log('Wrong Answer. User guessed ' + question6 + ' has used ' + guess + ' guesses and has ' + totalWrong + ' wrong answers.');
     userMessage = 'Nope.  You guessed a little high.  You have ' + (4 - guess) + ' guesses left';
     if (guess > 3) {
       totalWrong = totalWrong + 1;
     } 
   } else if(question6 = question6Answer) {
+    console.log('Correct Answer. User guessed ' + question6 + ' and used ' + guess + ' guesses and has ' + totalWrong + ' wrong answers.');
     userMessage = 'You got it. You used up ' + guess + ' guesses.';
   }
   alert(userMessage);
@@ -148,14 +151,16 @@ do {
   question7 = question7.toUpperCase();
   if ((question7 != 'GEORGIA') && (question7 != 'ALASKA')) {
     guess = guess + 1;
+    console.log('Wrong Answer.  User guessed ' + question7 + ' and used ' + guess + ' guesses and has ' + totalWrong + ' wrong answers.');
     userMessage = 'Nope.  Try Again!  You have ' + (6 - guess) + ' guesses left';
         if (guess > 5) {
       totalWrong = totalWrong + 1;
     }
   } else if((question7 = 'GEORGIA') || (question7 = 'ALASKA')) {
+    console.log('Correct Answer. User guessed ' + question7 + ' and used ' + guess + ' guesses and has ' + totalWrong + 'wrong answers.');
     guess = guess + 1; 
     userMessage = 'Holy cow.  Great Guess.';
   }
   alert(userMessage);
 } while ((question7 != 'GEORGIA') && (question7 != 'ALASKA') && (guess < 6));
-alert('We hit the end');
+alert('You got ' + (totalWrong / 7 * 100) + '% on the Roger Quiz.');
