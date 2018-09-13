@@ -6,7 +6,7 @@ var userMessage = '';
 question1 = question1.toUpperCase();
 switch(question1) {
   case 'NO':
-    totalWrong = totalWrong + 1;
+    totalWrong++;
     console.log('Wrong Answer. User has entered no for Q1 with ' + totalWrong + ' wrong answers.');
     userMessage = 'Nice Try! Well not realy, just trying to be nice!';
     break;
@@ -15,7 +15,7 @@ switch(question1) {
     userMessage = 'DING DING DING.  He loves his Dog Luke!';
     break;
   default:
-    totalWrong = totalWrong + 1;
+    totalWrong++;
     console.log('Wrong Answer. User did not pick yes or no for Q1 with ' + totalWrong + ' wrong answers.'); 
     userMessage = 'That was a great guess but totaly WRONG! His Dog has his heart.';
     break;
@@ -35,12 +35,12 @@ switch(question2) {
     }
     break;
   case 'YES':
-    totalWrong = totalWrong + 1;
+    totalWrong++;
     console.log('Wrong Answer. User entered yes for Q2 with ' + totalWrong + ' wrong answers.');
     userMessage = 'Nope, iPhone for Roger.';
     break;
   default:
-    totalWrong = totalWrong + 1;
+    totalWrong++;
     console.log('Wrong Answer. User did not pick yes or no for Q2 with ' + totalWrong + ' wrong answers.');
     userMessage = 'Nope, iPhone for Roger!';
     break; 
@@ -61,12 +61,12 @@ switch(question3) {
     }
     break;
   case 'YES':
-    totalWrong = totalWrong + 1;
+    totalWrong++;
     console.log('Wrong Answer. User entered yes for Q3 with ' + totalWrong + ' wrong answers.');
     userMessage = 'Sorry! Roger appreciates the confidence, BUT we are talking about Bobby Flay.';
     break;
   default:
-    totalWrong = totalWrong + 1;
+    totalWrong++;
     console.log('Wrong Answer. User did not pick yes or no for Q3 with ' + totalWrong + ' wrong answers.');
     userMessage = 'Someone needs to revisit Roger101!';
     break;
@@ -78,7 +78,7 @@ userMessage = '';
 question4 = question4.toUpperCase();
 switch(question4) {
 case 'NO':
-  totalWrong = totalWrong + 1;
+  totalWrong++;
   console.log('Wrong Answer. User entered no for Q4 with ' + totalWrong + ' wrong answers.');
   userMessage = 'Ouch! Roger has serverd in the US Army and in the US Navy.';
 break;
@@ -87,7 +87,7 @@ case 'YES':
   userMessage = 'Outstanding.  Roger did server in 2 Branches.  Army and Navy.'
   break;
 default:
-  totalWrong = totalWrong + 1;
+  totalWrong++;
   console.log('Wrong Answer. User did not pick yes or no for Q4 with ' + totalWrong + ' wrong answers.'); 
   userMessage = 'Roger has serverd in the US Army and in the US Navy.';
 break;
@@ -99,7 +99,7 @@ userMessage = '';
 question5 = question5.toUpperCase();
 switch(question5) {
   case 'NO':
-  totalWrong = totalWrong + 1;
+  totalWrong++;
   console.log('Wrong Answer. User entered no for Q5 with ' + totalWrong + ' wrong answers.');
   userMessage = 'Wrong Answer.  Roger has won a few National Championships in Trade Wars 2002.';
 break;
@@ -108,7 +108,7 @@ case 'YES':
   userMessage = 'Outstanding.  Roger has won a few National Championships in Trade Wars 2002.';
 break;
 default:
-  totalWrong = totalWrong + 1;
+  totalWrong++;
   console.log('Wrong Answer. User did not pick yes or no for Q4 with ' + totalWrong + ' wrong answers.'); 
   userMessage = 'Roger has won a few National Championships in Trade Wars 2002.';
 break;
@@ -123,18 +123,18 @@ do {
   question6 = prompt('From 1-20, how many National Championships has Roger won in Trade Wars 2002? You have 4 chances to guess!');
   parseInt(question6);
   if (question6 < question6Answer) {
-    guess = guess + 1;
+    guess++;
     console.log('Wrong Answer. User guessed ' + question6 + ' has used ' + guess + ' guesses and has ' + totalWrong + ' wrong answers.');
     userMessage = 'Nope.  You guessed a little low.  You have ' + (4 - guess) + ' guesses left';
         if (guess > 3) {
-      totalWrong = totalWrong + 1;
+      totalWrong++;
     }
   } else if(question6 > question6Answer) {
-    guess = guess + 1; 
+    guess++; 
     console.log('Wrong Answer. User guessed ' + question6 + ' has used ' + guess + ' guesses and has ' + totalWrong + ' wrong answers.');
     userMessage = 'Nope.  You guessed a little high.  You have ' + (4 - guess) + ' guesses left';
     if (guess > 3) {
-      totalWrong = totalWrong + 1;
+      totalWrong++;
     } 
   } else if(question6 = question6Answer) {
     console.log('Correct Answer. User guessed ' + question6 + ' and used ' + guess + ' guesses and has ' + totalWrong + ' wrong answers.');
@@ -150,15 +150,15 @@ do {
   question7 = prompt('You get 6 changes.  Guess one of the Submarines that Roger server on. (HINT:  They are named after US States!');
   question7 = question7.toUpperCase();
   if ((question7 != 'GEORGIA') && (question7 != 'ALASKA')) {
-    guess = guess + 1;
+    guess++;
     console.log('Wrong Answer.  User guessed ' + question7 + ' and used ' + guess + ' guesses and has ' + totalWrong + ' wrong answers.');
     userMessage = 'Nope.  Try Again!  You have ' + (6 - guess) + ' guesses left';
         if (guess > 5) {
-      totalWrong = totalWrong + 1;
+      totalWrong++;
     }
   } else if((question7 = 'GEORGIA') || (question7 = 'ALASKA')) {
     console.log('Correct Answer. User guessed ' + question7 + ' and used ' + guess + ' guesses and has ' + totalWrong + 'wrong answers.');
-    guess = guess + 1; 
+    guess++; 
     userMessage = 'Holy cow.  Great Guess.';
   }
   alert(userMessage);
