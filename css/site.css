@@ -3,31 +3,73 @@
 }
 
 header {
-    background: orange;
-    color: blue;
+    background: brown;
+    color:blanchedalmond;
     height: 50px;
     line-height: 50px;
     text-align: center;
     border-radius: 20px;
 }
 
+body {
+    background-color:rgb(rgb(107, 101, 101), green, blue);
+}
 div {
-    border: 2px dashed #111;
     margin: 30px;
     padding: 10px;
 }
 
-h2{
+h2 {
+    background: gray;
+    border: 2px solid #111;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif';
+    
+}
+
+#schoolgrad, #jobtitle {
+    font-size: 18px;
+	font-style: italic;
+}
+
+#companyname {
+    margin-top: 5px;
+}
+
+li {
+    margin-left: 40px;
+    padding: 1px;
+}
+
+#heading{
+    margin: 10px 0px;
+}
+
+ol {
+    display: inline;
+    margin: 0 10px;
+    padding: 0 10px;
+}
+
+#indent {
+    margin-left: 60px;
+    text-indent: 5px;
 }
 
 footer {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 1px;
-    background-color: orange;
+    padding: 10px;
+    color:blanchedalmond;
+    background-color: brown;
     text-align: center;
     border-radius: 20px;
 }
