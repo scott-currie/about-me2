@@ -1,79 +1,161 @@
 'use strict';
 
-var totalQuestionsWrong = 0
+var totalWrong = 0
 var question1 = prompt('Is Roger a Dog Lover?');
 var userMessage = '';
 question1 = question1.toUpperCase();
 switch(question1) {
   case 'NO':
-    totalQuestionsWrong = totalQuestionsWrong + 1;
-    console.log('User has entered no for Q1 with ' + totalQuestionsWrong + ' wrong answers.');
+    totalWrong = totalWrong + 1;
+    console.log('Wrong Answer. User has entered no for Q1 with ' + totalWrong + ' wrong answers.');
     userMessage = 'Nice Try! Well not realy, just trying to be nice!';
     break;
   case 'YES':
-    console.log('User has entered yes for Q1 with ' + totalQuestionsWrong + ' wrong answers.');
+    console.log('Correct Answer. User has entered yes for Q1 with ' + totalWrong + ' wrong answers.');
     userMessage = 'DING DING DING.  He loves his Dog Luke!';
     break;
   default:
-    totalQuestionsWrong = totalQuestionsWrong + 1;
-    console.log('user did not pick yes or no for Q1 with ' + totalQuestionsWrong + ' wrong answers.'); 
+    totalWrong = totalWrong + 1;
+    console.log('Wrong Answer. User did not pick yes or no for Q1 with ' + totalWrong + ' wrong answers.'); 
     userMessage = 'That was a great guess but totaly WRONG! His Dog has his heart.';
     break;
 }
-alert(userMessage + ' You have answered ' + totalQuestionsWrong + ' wrong answers.');
+alert(userMessage + ' You have answered ' + totalWrong + ' wrong answers.');
 
-var question2 = prompt('Does Roger prefer an iPhone or Android Device?');
+var question2 = prompt('Does Roger prefer an Android device over an Apple device?');
 userMessage = '';
 question2 = question2.toUpperCase();
 switch(question2) {
-  case 'IPHONE':
-    console.log('User entered iphone for Q2 with ' + totalQuestionsWrong + ' wrong answers');
-    if (totalQuestionsWrong = 0) {
+  case 'NO':
+    console.log('Correct Answer. User entered no for Q2 with ' + totalWrong + ' wrong answers');
+    if (totalWrong < 1) {
       userMessage = 'Wow, nice work. He loves the iPhone.  You got both questions right so far.  Keep it up';
     } else {
       userMessage = 'Wow, nice work. He loves the iPhone.  50% so far on the Roger Quiz';
     }
     break;
-  case 'ANDROID':
-    totalQuestionsWrong = totalQuestionsWrong + 1;
-    console.log('User entered android for Q2 with ' + totalQuestionsWrong + ' wrong answers.');
-    if (totalQuestionsWrong = 1) {
-      userMessage = 'Nope, iPhone for Roger. 50% so far on the Roger Quiz';
-    } else {
-      userMessage = 'Nope, iPhone for Roger. You have some catching up to do on the Quiz.  0% so far.';
-    }
+  case 'YES':
+    totalWrong = totalWrong + 1;
+    console.log('Wrong Answer. User entered yes for Q2 with ' + totalWrong + ' wrong answers.');
+    userMessage = 'Nope, iPhone for Roger.';
     break;
   default:
-    totalQuestionsWrong = totalQuestionsWrong + 1;
-    console.log('User did not enter iphone or android ' + totalQuestionsWrong + ' wrong answers.');
+    totalWrong = totalWrong + 1;
+    console.log('Wrong Answer. User did not pick yes or no for Q2 with ' + totalWrong + ' wrong answers.');
     userMessage = 'Nope, iPhone for Roger!';
     break; 
 }
-alert(userMessage + ' You have answered ' + totalQuestionsWrong + ' wrong answers.');
+alert(userMessage + ' You have answered ' + totalWrong + ' wrong answers.');
 
 var question3 = prompt('Can Roger\'s Famous CheeseBurger beat out Bobby Flay in a throwdown?');
 userMessage = '';
 question3 = question3.toUpperCase();
 switch(question3) {
   case 'NO':
-    console.log('User entered no for Q3 with ' + totalQuestionsWrong + ' wrong answers.');
+    console.log('Correct Answer. User entered no for Q3 with ' + totalWrong + ' wrong answers.');
     userMessage = 'Correct! He does make a mean Burger, but Bobby Flay is well, the BEST!';
-    if (totalQuestionsWrong = 0) {
+    if (totalWrong < 1) {
       userMessage = userMessage + ' 3 out of 3 so far.  Keep it up.';
     } else {
       userMessage = userMessage + ' Keep it up'
     }
     break;
   case 'YES':
-    totalQuestionsWrong = totalQuestionsWrong + 1;
-    console.log('User entered yes for Q3 with ' + totalQuestionsWrong + ' wrong answers.');
+    totalWrong = totalWrong + 1;
+    console.log('Wrong Answer. User entered yes for Q3 with ' + totalWrong + ' wrong answers.');
     userMessage = 'Sorry! Roger appreciates the confidence, BUT we are talking about Bobby Flay.';
     break;
   default:
-    totalQuestionsWrong = totalQuestionsWrong + 1;
-    console.log('User did not enter yes or no for Q3 with ' + totalQuestionsWrong + ' wrong answers.');
+    totalWrong = totalWrong + 1;
+    console.log('Wrong Answer. User did not pick yes or no for Q3 with ' + totalWrong + ' wrong answers.');
     userMessage = 'Someone needs to revisit Roger101!';
     break;
 }
-alert(userMessage + ' You have answered ' + totalQuestionsWrong + ' wrong answers.'); //Math is not adding correctly to this point
+alert(userMessage + ' You have answered ' + totalWrong + ' wrong answers.');
 
+var question4 = prompt('Did Roger server in 2 brances of the Military?');
+userMessage = '';
+question4 = question4.toUpperCase();
+switch(question4) {
+case 'NO':
+  totalWrong = totalWrong + 1;
+  console.log('Wrong Answer. User entered no for Q4 with ' + totalWrong + ' wrong answers.');
+  userMessage = 'Ouch! Roger has serverd in the US Army and in the US Navy.';
+break;
+case 'YES':
+  console.log('Correct Answer. User entered yes for Q4 with ' + totalWrong + ' wrong answers.');
+  userMessage = 'Outstanding.  Roger did server in 2 Branches.  Army and Navy.'
+  break;
+default:
+  totalWrong = totalWrong + 1;
+  console.log('Wrong Answer. User did not pick yes or no for Q4 with ' + totalWrong + ' wrong answers.'); 
+  userMessage = 'Roger has serverd in the US Army and in the US Navy.';
+break;
+}
+alert(userMessage + ' You have answered ' + totalWrong + ' wrong answers.');
+
+var question5 = prompt('Did Roger win a National Championship in an online game?');
+userMessage = '';
+question5 = question5.toUpperCase();
+switch(question5) {
+  case 'NO':
+  totalWrong = totalWrong + 1;
+  console.log('Wrong Answer. User entered no for Q5 with ' + totalWrong + ' wrong answers.');
+  userMessage = 'Wrong Answer.  Roger has won a few National Championships in Trade Wars 2002.';
+break;
+case 'YES':
+  console.log('Correct Answer. User entered yes for Q5 with ' + totalWrong + ' wrong answers.');
+  userMessage = 'Outstanding.  Roger has won a few National Championships in Trade Wars 2002.';
+break;
+default:
+  totalWrong = totalWrong + 1;
+  console.log('Wrong Answer. User did not pick yes or no for Q4 with ' + totalWrong + ' wrong answers.'); 
+  userMessage = 'Roger has won a few National Championships in Trade Wars 2002.';
+break;
+}
+alert(userMessage + ' You have answered ' + totalWrong + ' wrong answers.');
+
+userMessage = '';
+var question6Answer = 10;
+var guess = 0
+var question6 = '';
+do {
+  question6 = prompt('From 1-20, how many National Championships has Roger won in Trade Wars 2002? You have 4 chances to guess!');
+  parseInt(question6);
+  if (question6 < question6Answer) {
+    guess = guess + 1;
+    userMessage = 'Nope.  You guessed a little low.  You have ' + (4 - guess) + ' guesses left';
+        if (guess > 3) {
+      totalWrong = totalWrong + 1;
+    }
+  } else if(question6 > question6Answer) {
+    guess = guess + 1; 
+    userMessage = 'Nope.  You guessed a little high.  You have ' + (4 - guess) + ' guesses left';
+    if (guess > 3) {
+      totalWrong = totalWrong + 1;
+    } 
+  } else if(question6 = question6Answer) {
+    userMessage = 'You got it. You used up ' + guess + ' guesses.';
+  }
+  alert(userMessage);
+} while ((question6 != question6Answer) && (guess < 4));
+
+userMessage = '';
+var guess = 0
+var question7 = '';
+do {
+  question7 = prompt('You get 6 changes.  Guess one of the Submarines that Roger server on. (HINT:  They are named after US States!');
+  question7 = question7.toUpperCase();
+  if ((question7 != 'GEORGIA') && (question7 != 'ALASKA')) {
+    guess = guess + 1;
+    userMessage = 'Nope.  Try Again!  You have ' + (6 - guess) + ' guesses left';
+        if (guess > 5) {
+      totalWrong = totalWrong + 1;
+    }
+  } else if((question7 = 'GEORGIA') || (question7 = 'ALASKA')) {
+    guess = guess + 1; 
+    userMessage = 'Holy cow.  Great Guess.';
+  }
+  alert(userMessage);
+} while ((question7 != 'GEORGIA') && (question7 != 'ALASKA') && (guess < 6));
+alert('We hit the end');
